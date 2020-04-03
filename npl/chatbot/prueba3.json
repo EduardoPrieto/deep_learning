@@ -1,0 +1,42 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hola", "holii", "Buenos dias", "Buenas tardes", "Buenas noches", "wenas"],
+         "responses": ["Hola, gracias por visitarnos", "Gusto en verte", "hola, en que puedo ayudarte?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Adios", "Hasta luego", "Vemos"],
+         "responses": ["Hasta luego, gracias por visitarnos", "Ten un bonito dias", "Adios, vuelve pronto."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Gracias", "Muchas gracias", "Todo bien"],
+         "responses": ["Estoy feliz de ayudar!", "A la orden!", "De nada"]
+        },
+        {"tag": "hours",
+         "patterns": ["a que hora esta abierto?", "a que horas?", "cuando esta abierto?" ],
+         "responses": ["estamos abiertos todo el dia de 9am-9pm", "Nuestra hora de atencion es 9am-9pm todos los dias"]
+        },
+        {"tag": "mopeds",
+         "patterns": ["Cuales mopeds tienes?", "Que tipo de mopeds tienes?", "Que estan rentando?" ],
+         "responses": ["Nosotros rentamos Yamaha, Piaggio y Vespa mopeds", "Nosotros tenemos Piaggio, Vespa y Yamaha mopeds"]
+        },
+        {"tag": "payments",
+         "patterns": ["credito", "Aceptan tarjeta de credito?", "Aceptan Mastercard?", "puedo pagar con tajeta de credito?", "Que tipo de tarjetas de credito aceptan?"],
+         "responses": ["Nosotros aceptamos VISA, Mastercard y AMEX", "Nosotros aceptamos todo tipo de tarjetas"]
+        },
+        {"tag": "opentoday",
+         "patterns": ["Esta abierto hoy??", "cuando estan abiertos?", "desde que hora abren?"],
+         "responses": ["estamos abiertos todo el dia de 9am-9pm", "Nuestra hora de atencion es 9am-9pm todos los dias"]
+        },
+        {"tag": "rental",
+         "patterns": ["Puedo rentas un moped?", "Me gustaria rentan un moped", "como funcona esto?" ],
+         "responses": ["que tipo de moped desea rentar?"],
+         "context_set": "rentalday"
+        },
+        {"tag": "today",
+         "patterns": ["Yamaha","Piaggio", "Vespa"],
+         "responses": ["Muchas gracias, puede pasar hoy mismo por su {0} moped", "Gracias, puede pasar por su {0} moped cuando desee"],
+         "context_filter": "rentalday"
+        }
+   ]
+}

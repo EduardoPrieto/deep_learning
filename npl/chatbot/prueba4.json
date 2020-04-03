@@ -1,0 +1,28 @@
+{"intents": [
+    {"tag": "saludo",
+     "patterns": ["Hola", "holii", "Buenos dias", "Buenas tardes", "Buenas noches", "wenas"],
+     "responses": ["Hola, gracias por reunirse conmigo. ¿me podria indicar con quien estoy hablando?","Buenas, gracias por esta reunion. ¿me podria indicar con quien estoy hablando?"],
+     "context_set": ""
+    },
+    {"tag": "nomre",
+     "patterns": ["yo soy","mi nombre es","me llamo"],
+     "responses": ["¿que cargo desempeña?","¿cual es el cargo que desempeña dentro de la compañia?"],
+     "context_set": "cargo"
+    },
+    {"tag": "cargo",
+     "patterns": ["yo soy el","yo soy la", "yo trabajo de","mi cargo es"],
+     "responses": ["¿Cuales son sus principales responsabilidades?","¿que funciones desempeña?"],
+     "context_filter": "cargo"
+    },
+    {"tag": "responsabilidades",
+        "patterns": ["yo me encargo de", "entre mis responsabilidades esta", "lo que debo hacer es"],
+        "responses": ["¿que entregables produce?","¿cuales son sus entregables?"],
+        "context_set": ""
+       },
+       {"tag": "entregables",
+        "patterns": ["yo debo entregar un", "es un", "los entregables son", "entre los entregables esta"],
+        "responses": ["¿para quien son?","¿quien recibe dichos entregables?","¿quien los recibe?"],
+        "context_set": ""
+       }
+]
+}
